@@ -10,7 +10,11 @@ load_dotenv()
 last_messages = 5
 token = os.getenv("DISCORD_TOKEN")
 print(token)
-client = discord.Client()
+
+# Set up intents
+intents = discord.Intents.default()
+intents.message_content = True
+client = discord.Client(intents=intents)
 
 
 @client.event
