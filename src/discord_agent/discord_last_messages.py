@@ -9,6 +9,7 @@ load_dotenv()
 
 last_messages = 5
 token = os.getenv("DISCORD_TOKEN")
+print(token)
 client = discord.Client()
 
 
